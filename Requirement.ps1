@@ -21,10 +21,10 @@
         }
 
         # Check currently installed version of Notepad++
-        $installedversion = (Get-Item "C:\Program Files\Notepad++\notepad++.exe").VersionInfo.FileVersion
+        $installedVersion = (Get-Item "C:\Program Files\Notepad++\notepad++.exe").VersionInfo.FileVersion
 
         # Compare currently installed version of Notepad++ with most recent version
-        if([version]$installedversion -ne [version]$latestReleaseVersion) {
+        if([version]$installedVersion -ne [version]$latestReleaseVersion) {
             $EligibleForUpdate = $true
         }
     }
