@@ -14,11 +14,11 @@
         Write-Error "Failed to collect Notepad++ version information from Github."
     }
 
-    $installedversion = (Get-Item "C:\Program Files\Notepad++\notepad++.exe").VersionInfo.FileVersion
+    $installedVersion = (Get-Item "C:\Program Files\Notepad++\notepad++.exe").VersionInfo.FileVersion
 
-    if([version]$installedversion -eq [version]$latestReleaseVersion) {
+    if([version]$installedCersion -eq [version]$latestReleaseVersion) {
         Write-Host "Notepad++ detected!"
-        # Exit 0
+        Exit 0
     }
 }
 
